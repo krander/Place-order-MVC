@@ -11,14 +11,14 @@ namespace OrdersMVC.Controllers
         // GET: Order
         public ActionResult Index()
         {
-            var myO = new OrdersMVC.Models.Order();
+            var myO1 = new OrdersMVC.Models.Order();
             {
-                Console.WriteLine(myO.ID = 123);
-                Console.WriteLine(myO.OrderDate = "03/14/2019 09:33 AM");
-                Console.WriteLine(myO.CustomerId = 100001);
-                Console.WriteLine(myO.Comments = "Please overnight.");
+                myO1.ID = 123;
+                myO1.OrderDate = "03/14/2019 09:33 AM";
+                myO1.CustomerId = 100001;
+                myO1.Comments = "Please overnight.";
 
-                return View();
+                return View(myO1);
             }
         }
     }
