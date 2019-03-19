@@ -1,8 +1,14 @@
 @model OrdersMVC.Models.Order
 
 @{
-    ViewBag.Title = "Order";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Order</h2>
-<h3></h3>
+<h1>Your Order</h1>
+<h2>
+    Order ID: @Model.ID <br />
+    Order date: @Model.OrderDate <br />
+    Customer ID: @Model.CustomerId <br />
+    Additional comments: @Model.Comments <br />
+</h2>
