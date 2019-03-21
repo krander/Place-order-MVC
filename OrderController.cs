@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,15 +12,27 @@ namespace OrdersMVC.Controllers
         // GET: Order
         public ActionResult Index()
         {
-            var myO1 = new OrdersMVC.Models.Order();
-            {
-                myO1.ID = 123;
-                myO1.OrderDate = "03/14/2019 09:33 AM";
-                myO1.CustomerId = 100001;
-                myO1.Comments = "Please overnight.";
+            var conn = new SqlConnection ("sqldev.vaxcare.com;Initial Catalog=Sales;User ID=VxUser;PWD=L0ngP@s$W0r|>$@r3|3es7!");
+            conn.Open();
 
-                return View(myO1);
+            var cmd = new SqlCommand("SELECT TOP 10 * FROM Orders");
+            SqlDataReader sdr = cmd.ExecuteReader();
+
+            if (sdr.HasRows)
+            {
+                while (sdr.Read())
+                {
+                    Console.WriteLine();
+                }
             }
+            else
+            {
+                Console.WriteLine("No rows found.");
+            }
+            sdr.Close();
+            //var sda = new SqlDataAdapter(cmd);
+            //conn.Close();
+            return View();
         }
     }
 }
