@@ -1,7 +1,9 @@
-# OrdersMVC
+Take your orders MVC app and create a new model that contains a property that holds a list of your order class. Your code will look something like this:
 
-1. Create a new MVC app called OrdersMVC. Create a new model called Order that has these properties: an ID, an order date, a customer id, and a spot for comments. Remember a model is just a POCO class (Plain Old Class Objects).
+public List<Order> Orders {get; set;}
 
-2. Create a new empty controller called OrderController, and an empty view called Order – but set the view up with the Order model you created in the previous step. Visual Studio should prompt you to do this when you create a new view. 
+Create a new controller and view combo called “Orders” and tie the view to this new model.
 
-3. In the Index action of your controller, create a new instance of your model and populate the properties with some data. Then display that data in the view.
+In your controller, create a bunch of dummy orders and add them to the list of orders, and then use the view to display the data. 
+
+Try using different forms of razor syntax: @{ code }, @foreach, etc.
