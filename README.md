@@ -1,9 +1,9 @@
-Take your orders MVC app and create a new model that contains a property that holds a list of your order class. Your code will look something like this:
+Let’s talk to the database.
 
-public List<Order> Orders {get; set;}
+Use your OrdersMVC app and edit your controller to grab data. Using SqlConnection and SqlCommand, connect to the dev database using this connection string:
 
-Create a new controller and view combo called “Orders” and tie the view to this new model.
+Data Source=VXCDEV-DE-01;Initial Catalog=Sales;User ID=VxUser;PWD=L0ngP@s$W0r|>$@r3|3es7!
 
-In your controller, create a bunch of dummy orders and add them to the list of orders, and then use the view to display the data. 
+Query the Orders table and display the top 10 orders’ info on the page (SELECT TOP 10 * FROM Orders). You can use a DataTable or SqlDataReader, whichever you feel more comfortable with.
 
-Try using different forms of razor syntax: @{ code }, @foreach, etc.
+Pro move: try to put the connection string in the web.config’s “connectionStrings” section. Looking at the web.config for applications already developed is a great way to learn.
