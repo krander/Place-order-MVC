@@ -1,0 +1,16 @@
+@model List<OrdersMVC.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Orders:</h2>
+<h3>
+    @foreach (var O in Model)
+    {
+        <p>@O.ID</p>
+        <p>@O.OrderDate</p>
+        <p>@O.CustomerId</p>
+        <p>@O.Comments</p>
+    }
+</h3>
