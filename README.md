@@ -1,4 +1,4 @@
-Let’s talk to the database.
+# Let’s talk to the database.
 
 Use your OrdersMVC app and edit your controller to grab data. Using SqlConnection and SqlCommand, connect to the dev database using this connection string:
 
